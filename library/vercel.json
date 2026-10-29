@@ -2,15 +2,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
-    "**/*.php": {
+    "api/*.php": {
       "runtime": "vercel-php@0.9.0"
     }
-  },
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/index.php"
-    }
-  ]
+  }
 }
-
