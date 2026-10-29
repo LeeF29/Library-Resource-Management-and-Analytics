@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Circulation · Library System</title>
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body data-roles="admin,librarian" data-layout="staff" data-active="transactions" data-title="Circulation">
+
+<main id="content">
+
+<div class="page-head">
+  
+  <div><h2>Circulation desk</h2>
+  
+    <p>Track borrowing, returns and due dates.</p>
+
+  </div>
+  
+  <a class="btn btn-gold" href="borrow.html">+ New loan</a>
+
+</div>
+
+<div class="chips" id="chips"></div>
+
+<div class="searchbar">
+  
+  <form id="filters" class="filters" autocomplete="off">
+    
+    <input type="search" name="q" placeholder="Member name, ID or title" aria-label="Search">
+
+    <label class="inline-label">From <input type="date" name="from"></label>
+    <label class="inline-label">To <input type="date" name="to"></label>
+    <button class="btn btn-primary" type="submit">Filter</button>
+    <button class="btn btn-ghost" type="button" id="clear">Clear</button>
+  
+  </form>
+
+</div>
+
+<div class="card">
+  
+  <div id="list"></div>
+  
+  <div id="pager"></div>
+
+</div>
+
+</main>
+
+<noscript><p style="padding:1rem">This page needs JavaScript turned on.</p></noscript>
+
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/pages/transactions.js"></script>
+
+</body>
+</html>

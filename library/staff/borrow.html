@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>New Loan · Library System</title>
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body data-roles="admin,librarian" data-layout="staff" data-active="borrow" data-title="New Loan">
+
+<main id="content">
+
+<form class="card form" id="form">
+
+  <p class="sub" id="rules"></p>
+
+  <div class="form-grid">
+
+    <div class="field">
+      
+      <label for="memberFilter">Member 
+        
+        <span class="req">*</span>
+      
+      </label>
+
+
+      <input id="memberFilter" type="search" placeholder="Type to filter members…" aria-label="Filter members">
+
+      <select id="member_id" name="member_id" size="7" required></select>
+    
+    </div>
+
+    <div class="field">
+      
+      <label for="resourceFilter">Resource 
+        
+        <span class="req">*</span>
+      
+      </label>
+
+      <input id="resourceFilter" type="search" placeholder="Type to filter resources…" aria-label="Filter resources">
+      <select id="resource_id" name="resource_id" size="7" required></select>
+    
+    </div>
+
+  </div>
+
+  <div id="emptyNote"></div>
+
+  <div class="form-actions">
+    
+    <button class="btn btn-primary" type="submit">Record loan</button>
+    <a class="btn btn-ghost" href="transactions.html">View circulation</a>
+  
+  </div>
+
+</form>
+
+</main>
+
+<noscript><p style="padding:1rem">This page needs JavaScript turned on.</p></noscript>
+
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/pages/borrow.js"></script>
+
+</body>
+</html>

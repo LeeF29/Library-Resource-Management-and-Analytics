@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Reports · Library System</title>
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body data-roles="admin,librarian" data-layout="staff" data-active="reports" data-title="Reports">
+
+<main id="content">
+
+<div class="page-head">
+  
+  <div>
+    
+    <h2>Reports &amp; analytics</h2>
+    <p>Inventory, borrowing activity and most borrowed titles. Figures come straight from the database.</p>
+
+  </div>
+
+</div>
+
+<div class="tabs" id="tabs"></div>
+
+<div class="searchbar">
+  
+  <form id="filters" class="filters" autocomplete="off">
+    
+    <select name="category" id="fCategory" aria-label="Category"></select>
+    <select name="rtype" aria-label="Type">
+    
+      <option value="">All types</option>
+      <option value="book">Book</option>
+      <option value="journal">Journal</option>
+      <option value="other">Other material</option>
+  
+    </select>
+
+    <span id="dateFilters">
+    
+      <label class="inline-label">From <input type="date" name="from"></label> 
+      <label class="inline-label">To <input type="date" name="to"></label>
+  
+    </span>
+
+    <button class="btn btn-primary" type="submit">Apply filters</button>
+    <button class="btn btn-ghost" type="button" id="clear">Clear</button>
+
+    <a class="btn btn-gold" id="csv" href="#">Download CSV</a>
+
+  </form>
+
+</div>
+
+<section class="cards" id="summary"></section>
+
+<div class="card">
+  
+  <h2 id="reportTitle"></h2>
+  <div id="list"></div>
+
+</div>
+
+</main>
+
+<noscript><p style="padding:1rem">This page needs JavaScript turned on.</p></noscript>
+
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/pages/reports.js"></script>
+
+</body>
+</html>

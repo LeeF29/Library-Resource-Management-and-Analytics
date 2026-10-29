@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Categories · Library System</title>
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body data-roles="admin,librarian" data-layout="staff" data-active="categories" data-title="Categories">
+
+<main id="content">
+
+<div class="grid-2">
+
+  <form class="card form" id="addForm">
+    
+    <h2>Add a category</h2>
+    <p class="sub">Categories organize books, journals and other materials.</p>
+
+    <div class="field">
+      
+      <label for="name">Category name <span class="req">*</span></label>
+      <input id="name" name="name" maxlength="80" required>
+    
+    </div>
+
+    <div class="form-actions">
+      
+      <button class="btn btn-primary" type="submit">Add category</button>
+    
+    </div>
+  
+  </form>
+
+  <div class="card">
+    
+    <h2>Existing categories</h2>
+    
+    <div id="list"></div>
+  
+  </div>
+
+</div>
+
+</main>
+
+<noscript><p style="padding:1rem">This page needs JavaScript turned on.</p></noscript>
+
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/pages/categories.js"></script>
+
+</body>
+</html>

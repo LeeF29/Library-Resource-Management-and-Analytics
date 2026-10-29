@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Account · Library System</title>
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body data-roles="admin" data-layout="staff" data-active="users" data-title="Account">
+
+<main id="content">
+
+<form class="card form" id="form" novalidate autocomplete="off">
+
+  <div class="form-grid">
+
+    <div class="field">
+      
+      <label for="username">Username <span class="req">*</span></label>
+      <input id="username" name="username" maxlength="50" required>
+    
+    </div>
+
+    <div class="field">
+      
+      <label for="full_name">Full name <span class="req">*</span></label>
+      <input id="full_name" name="full_name" maxlength="100" required>
+    
+    </div>
+
+    <div class="field"><label for="role">Role <span class="req">*</span></label>
+      
+      <select id="role" name="role">
+        
+        <option value="admin">Library Administrator</option>
+        <option value="librarian">Librarian</option>
+        <option value="student">Student / Library Member</option>
+      
+      </select>
+    
+    </div>
+
+    <div class="field" id="memberField">
+      
+      <label for="member_id">Linked member (students)</label>
+      <select id="member_id" name="member_id"></select>
+    
+    </div>
+
+    <div class="field">
+      
+      <label for="password" id="pwLabel">Password</label>
+      <input id="password" name="password" type="password" minlength="8" maxlength="72" autocomplete="new-password">
+      
+      <small id="pwNote">At least 8 characters.</small>
+    
+    </div>
+
+  </div>
+
+  <div class="form-actions">
+    
+    <button class="btn btn-primary" type="submit" id="saveBtn">Create account</button>
+    <a class="btn btn-ghost" href="users.html">Cancel</a>
+  
+  </div>
+
+</form>
+
+</main>
+
+<noscript><p style="padding:1rem">This page needs JavaScript turned on.</p></noscript>
+
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/pages/user_form.js"></script>
+
+</body>
+</html>

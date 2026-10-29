@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Members · Library System</title>
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body data-roles="admin,librarian" data-layout="staff" data-active="members" data-title="Members">
+
+<main id="content">
+
+<div class="page-head">
+  
+  <div>
+    
+    <h2>Library members</h2>
+    <p>Student and library member records.</p>
+  
+  </div>
+  
+  <a class="btn btn-primary" href="member_form.html">+ Add member</a>
+
+</div>
+
+<div class="searchbar">
+  
+  <form id="filters" class="filters" autocomplete="off">
+
+    <input type="search" name="q" placeholder="Search name, member ID or email" aria-label="Search">
+
+    <select name="status" aria-label="Status">
+    
+      <option value="">All statuses</option>
+      <option value="active">Active</option>
+      <option value="inactive">Inactive</option>
+  
+    </select>
+
+    <button class="btn btn-primary" type="submit">Search</button>
+    <button class="btn btn-ghost" type="button" id="clear">Clear</button>
+
+  </form>
+
+</div>
+
+<div class="card">
+  
+  <div id="list"></div>
+  <div id="pager"></div>
+
+</div>
+
+</main>
+
+<noscript><p style="padding:1rem">This page needs JavaScript turned on.</p></noscript>
+
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/pages/members.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Member · Library System</title>
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body data-roles="admin,librarian" data-layout="staff" data-active="members" data-title="Member">
+
+<main id="content">
+
+<div class="card"><dl class="details" id="info"></dl>
+
+  <div class="form-actions">
+    
+    <a class="btn btn-ghost" href="members.html">&laquo; Back to members</a>
+    <a class="btn" id="editLink" href="#">Edit</a>
+    
+    <a class="btn btn-gold" id="loanLink" href="#">+ New loan</a>
+  
+  </div>
+
+</div>
+
+<div class="card">
+  
+  <h2>Borrowing history</h2>
+  
+  <div id="history"></div>
+
+</div>
+
+</main>
+
+<noscript><p style="padding:1rem">This page needs JavaScript turned on.</p></noscript>
+
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/pages/member_view.js"></script>
+
+</body>
+</html>

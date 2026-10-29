@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Overview · Library System</title>
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body data-roles="admin,librarian" data-layout="staff" data-active="dashboard" data-title="Overview">
+
+<main id="content">
+
+<section class="hero">
+
+  <div>
+    
+    <span class="eyebrow">Today at the library</span>
+    <h2>Collection overview</h2>
+
+    <p>Follow circulation, spot overdue items and see which titles readers borrow most.</p>
+
+    <div class="hero-actions">
+    
+      <a class="btn btn-gold" href="borrow.html">+ New loan</a>
+      <a class="btn btn-light" href="books.html">Manage catalog</a>
+  
+    </div>
+  
+  </div>
+
+  <div class="hero-panel">
+    
+    <span class="eyebrow">Copies available</span>
+    
+    <div class="big">
+      
+      <span id="availPct">–</span>
+      <small>%</small>
+    
+    </div>
+
+    <div class="meter">
+      
+      <i id="availBar" style="width:0"></i>
+    
+    </div>
+    
+    <p id="availText"></p>
+  
+  </div>
+
+</section>
+
+<section class="cards" id="stats"></section>
+
+<section class="grid-2">
+  
+  <div class="card">
+    
+    <h2>Borrowing activity</h2>
+    <p class="sub">Items borrowed per month, last 6 months</p>
+    
+    <div id="activity"></div>
+  
+  </div>
+
+  <div class="card">
+    
+    <h2>Most frequently borrowed</h2>
+    <p class="sub">All-time borrowing leaders</p>
+    
+    <div id="top"></div>
+
+  </div>
+
+</section>
+
+<section class="grid-2">
+
+  <div class="card">
+    
+    <h2>Overdue items</h2>
+    <p class="sub">Not returned and past the due date</p>
+
+    <div id="overdue"></div>
+  
+  </div>
+
+  <div class="card">
+    
+    <h2>Recent transactions</h2>
+    
+    <p class="sub">Latest borrowing and return activity</p>
+    <div id="recent"></div>
+  
+  </div>
+
+</section>
+</main>
+
+<noscript><p style="padding:1rem">This page needs JavaScript turned on.</p></noscript>
+
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/pages/dashboard.js"></script>
+
+</body>
+</html>

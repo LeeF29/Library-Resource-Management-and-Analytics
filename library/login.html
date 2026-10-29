@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Log in · Library System</title>
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body class="login-body" data-title="Log in">
+
+<main id="content">
+
+<div class="login-wrap">
+  
+  <form class="login-card" id="loginForm" autocomplete="off" novalidate>
+
+  <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">
+    
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      
+      <path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5"/>
+    
+    </svg></span></a>
+
+    <h1>Library Resource Management<br>and Analytics System</h1>
+
+    <p class="muted">Log in to continue</p>
+
+    <div id="flashes"></div>
+
+    <label for="username">Username</label><input id="username" name="username" maxlength="50" required autofocus>
+    <label for="password">Password</label><input id="password" name="password" type="password" required>
+
+    <button class="btn btn-block" type="submit">Log in</button>
+  
+    <a class="back" href="index.html">&larr; Back to the public catalog</a>
+
+  </form>
+
+</div>
+
+</main>
+
+<noscript><p style="padding:1rem">This page needs JavaScript turned on.</p></noscript>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/pages/login.js"></script>
+
+</body>
+</html>

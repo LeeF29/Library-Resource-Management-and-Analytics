@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Catalog · Library System</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body data-layout="public" data-active="catalog" data-title="Catalog">
+
+<main id="content">
+
+<section class="hero">
+
+  <div><span class="eyebrow">Online catalog</span><h2>Find your next read</h2>
+
+  <p>Search books, journals and learning materials, and see right away whether a copy is available on the shelf.</p>
+
+  <div class="hero-actions" id="heroActions"></div></div>
+
+  <div class="hero-panel"><span class="eyebrow">Collection availability</span>
+
+    <div class="big"><span id="availPct">–</span><small>%</small></div>
+
+    <div class="meter"><i id="availBar" style="width:0"></i></div><p id="availText">Loading…</p>
+  
+  </div>
+
+</section>
+
+<div class="searchbar" id="catalogTop">
+  
+  <form id="filters" class="filters" autocomplete="off">
+
+    <input type="search" name="q" placeholder="Search title, author or ISBN" aria-label="Search the catalog">
+
+    <select name="category" id="fCategory" aria-label="Category"></select>
+  
+    <select name="type" aria-label="Type">
+      
+      <option value="">All types</option>
+      <option value="book">Book</option>
+      <option value="journal">Journal</option>
+      <option value="other">Other material</option>
+    
+    </select>
+
+    <select name="avail" aria-label="Availability">
+  
+      <option value="">Any availability</option>
+      <option value="available">Available now</option>
+      <option value="unavailable">All borrowed</option>
+
+    </select>
+
+    <button class="btn btn-primary" type="submit">Search</button>
+    <button class="btn btn-ghost" type="button" id="clear">Clear</button>
+
+  </form>
+</div>
+
+<div id="list"></div><div id="pager"></div>
+
+<dialog id="detailDialog">
+  
+  <div id="detailBody"></div>
+
+  <div class="dialog-actions">
+    
+    <button class="btn btn-primary" id="detailClose" type="button">Close</button>
+  
+  </div>
+
+</dialog>
+
+</main>
+
+<noscript><p style="padding:1rem">This page needs JavaScript turned on.</p></noscript>
+
+<script src="assets/js/app.js"></script>
+
+<script src="assets/js/pages/index.js"></script>
+
+</body>
+</html>

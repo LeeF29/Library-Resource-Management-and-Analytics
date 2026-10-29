@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Resource · Library System</title>
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body data-roles="admin,librarian" data-layout="staff" data-active="books" data-title="Resource">
+
+<main id="content">
+
+<form class="card form" id="form" novalidate>
+
+  <div class="form-grid">
+
+    <div class="field full">
+      
+      <label for="title">Title<span class="req">*</span></label>
+      <input id="title" name="title" maxlength="200" required>
+
+    </div>
+
+    <div class="field">
+      
+      <label for="author">Author <span class="req">*</span></label>
+      <input id="author" name="author" maxlength="150" required>
+    
+    </div>
+    
+    <div class="field">
+      
+      <label for="isbn">ISBN</label>
+      <input id="isbn" name="isbn" maxlength="20" placeholder="e.g. 978-0-13-235088-4">
+      
+      <small>Optional. Must be a valid ISBN-10 or ISBN-13 if entered.</small>
+    
+    </div>
+
+    <div class="field">
+      
+      <label for="category_id">Category <span class="req">*</span></label>
+      <select id="category_id" name="category_id" required></select>
+    
+    </div>
+
+    <div class="field">
+      
+      <label for="resource_type">Type <span class="req">*</span></label>
+      <select id="resource_type" name="resource_type">
+        
+        <option value="book">Book</option>
+        <option value="journal">Journal</option>
+        <option value="other">Other material</option>
+      
+      </select>
+    
+    </div>
+
+    <div class="field">
+      
+      <label for="publisher">Publisher</label>
+      <input id="publisher" name="publisher" maxlength="150">
+    
+    </div>
+
+    <div class="field">
+      
+      <label for="year_published">Year published</label>
+      <input id="year_published" name="year_published" inputmode="numeric" maxlength="4">
+    
+    </div>
+
+    <div class="field">
+      
+      <label for="total_copies">Number of copies <span class="req">*</span></label>
+      <input id="total_copies" name="total_copies" inputmode="numeric" value="1" required>
+
+      <small id="copiesNote"></small>
+    
+    </div>
+
+    <div class="field check" id="activeField" hidden><label>
+      
+      <input type="checkbox" name="is_active" id="is_active"> Active (can be borrowed)</label>
+    
+    </div>
+
+  </div>
+
+  <div class="form-actions">
+    
+    <button class="btn btn-primary" type="submit" id="saveBtn">Add resource</button>
+    <a class="btn btn-ghost" href="books.html">Cancel</a>
+  
+  </div>
+
+</form>
+</main>
+
+<noscript><p style="padding:1rem">This page needs JavaScript turned on.</p></noscript>
+
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/pages/book_form.js"></script>
+
+</body>
+</html>

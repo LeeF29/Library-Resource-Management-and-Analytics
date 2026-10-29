@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Member · Library System</title>
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body data-roles="admin,librarian" data-layout="staff" data-active="members" data-title="Member">
+
+<main id="content">
+
+<form class="card form" id="form" novalidate>
+
+  <div class="form-grid">
+
+    <div class="field">
+      
+      <label for="member_no">Member ID <span class="req">*</span></label>
+      <input id="member_no" name="member_no" maxlength="20" required>
+      
+      <small>School or library ID, e.g. 2024-0009.</small>
+    
+    </div>
+
+    <div class="field">
+      
+      <label for="full_name">Full name <span class="req">*</span></label>
+      <input id="full_name" name="full_name" maxlength="100" required>
+    
+    </div>
+
+    <div class="field">
+      
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" maxlength="100">
+      
+      <small>Optional.</small>
+    
+    </div>
+
+    <div class="field">
+      
+      <label for="contact_number">Contact number</label>
+      <input id="contact_number" name="contact_number" maxlength="20">
+      
+      <small>Optional.</small></div>
+
+  </div>
+
+  <div class="form-actions">
+    
+    <button class="btn btn-primary" type="submit" id="saveBtn">Add member</button>
+    <a class="btn btn-ghost" href="members.html">Cancel</a>
+  
+  </div>
+
+</form>
+</main>
+
+<noscript><p style="padding:1rem">This page needs JavaScript turned on.</p></noscript>
+
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/pages/member_form.js"></script>
+
+</body>
+</html>
