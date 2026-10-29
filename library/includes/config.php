@@ -1,25 +1,57 @@
+
 <?php
 /**
- * Project settings. Edit this file if your XAMPP setup is different.
- * (This folder is blocked from the browser by includes/.htaccess.)
+ * Project configuration.
+ * Supports local XAMPP and production environment variables.
  */
 
-// --- Database (XAMPP default: user "root" with an empty password) ---
-const DB_HOST    = '127.0.0.1';
-const DB_NAME    = 'library_db';
-const DB_USER    = 'root';
-const DB_PASS    = '';
+// --- Database configuration ---
+define(
+    'DB_HOST',
+    getenv('DB_HOST') !== false
+        ? getenv('DB_HOST')
+        : 'mysql-3b856bfb-leeanthonybautista23-1bf8.h.aivencloud.com'
+);
+
+define(
+    'DB_NAME',
+    getenv('DB_NAME') !== false
+        ? getenv('DB_NAME')
+        : 'defaultdb'
+);
+
+define(
+    'DB_USER',
+    getenv('DB_USER') !== false
+        ? getenv('DB_USER')
+        : 'avnadmin'
+);
+
+define(
+    'DB_PASS',
+    getenv('DB_PASSWORD') !== false
+        ? getenv('DB_PASSWORD')
+        : ''
+);
+
+define(
+    'DB_PORT',
+    (int) (getenv('DB_PORT') ?: 11005)
+);
+
 const DB_CHARSET = 'utf8mb4';
 
-// --- Web address of the project folder (htdocs/library -> /library) ---
+// --- Web address of the project folder ---
+// Local XAMPP: http://localhost/library
 const BASE_URL = '/library';
 
 // --- Library rules ---
-const LOAN_DAYS        = 7;   // how many days a borrowed item may be kept
-const MAX_ACTIVE_LOANS = 3;   // most items one member may borrow at the same time
-const PER_PAGE         = 10;  // rows per page in tables
+const LOAN_DAYS        = 7;
+const MAX_ACTIVE_LOANS = 3;
+const PER_PAGE         = 10;
 
-const APP_NAME         = 'Library Resource Management and Analytics System';
-const SESSION_IDLE_SEC = 1800; // log out after 30 minutes of no activity
+const APP_NAME = 'Library Resource Management and Analytics System';
+
+const SESSION_IDLE_SEC = 1800; // 30 minutes
 
 date_default_timezone_set('Asia/Manila');
