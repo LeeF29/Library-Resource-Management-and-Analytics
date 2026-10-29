@@ -43,7 +43,12 @@ const DB_CHARSET = 'utf8mb4';
 
 // --- Web address of the project folder ---
 // Local XAMPP: http://localhost/library
-const BASE_URL = '/library';
+define(
+    'BASE_URL',
+    getenv('BASE_URL') !== false
+        ? rtrim((string) getenv('BASE_URL'), '/')
+        : '/library'
+);
 
 // --- Library rules ---
 const LOAN_DAYS        = 7;
